@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '@/public/images/logo.png'
+import { messages } from '@/i18n'
+
 
 export default function Footer() {
   return (
@@ -18,7 +20,7 @@ export default function Footer() {
                 <Image src={Logo} width={24} height={24} alt="Logo" />
               </Link>
             </div>
-            <div className="grow text-sm text-zinc-500">&copy; Cruip.com. All rights reserved.</div>
+            <div className="grow text-sm text-zinc-500">&copy; {new Date().getFullYear()} Mosaic AI Assistant. Alle Rechte vorbehalten.</div>
             {/* Social links */}
             <ul className="flex space-x-4 mt-4 mb-1">
               <li>
@@ -47,22 +49,32 @@ export default function Footer() {
 
           {/* 2nd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-sm text-zinc-800 font-medium mb-2">Company</h6>
+            <h6 className="text-sm text-zinc-800 font-medium mb-2">{messages.footer.productColumnTitle}</h6>
             <ul className="text-sm space-y-2">
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">About us</a>
+                <Link className="text-zinc-500 hover:text-zinc-900 transition" href="/memory">
+                  {messages.footer.product.memory}
+                </Link>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Diversity & Inclusion</a>
+                <Link className="text-zinc-500 hover:text-zinc-900 transition" href="/assistenten">
+                  {messages.footer.product.assistants}
+                </Link>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Blog</a>
+                <Link className="text-zinc-500 hover:text-zinc-900 transition" href="/wie-es-funktioniert">
+                  {messages.footer.product.howItWorks}
+                </Link>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Careers</a>
+                <Link className="text-zinc-500 hover:text-zinc-900 transition" href="/use-cases">
+                  {messages.footer.product.useCases}
+                </Link>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Financial statements</a>
+                <Link className="text-zinc-500 hover:text-zinc-900 transition" href="/#pricing">
+                  {messages.footer.product.pricing}
+                </Link>
               </li>
             </ul>
           </div>
@@ -85,19 +97,19 @@ export default function Footer() {
 
           {/* 4th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-sm text-zinc-800 font-medium mb-2">Legals</h6>
+            <h6 className="text-sm text-zinc-800 font-medium mb-2">{messages.footer.legalColumnTitle}</h6>
             <ul className="text-sm space-y-2">
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Refund policy</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">{messages.footer.legal.refund}</a>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Terms & Conditions</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">{messages.footer.legal.terms}</a>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Privacy policy</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">{messages.footer.legal.privacy}</a>
               </li>
               <li>
-                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">Brand Kit</a>
+                <a className="text-zinc-500 hover:text-zinc-900 transition" href="#0">{messages.footer.legal.brandKit}</a>
               </li>
             </ul>
           </div>

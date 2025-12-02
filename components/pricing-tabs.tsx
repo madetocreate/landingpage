@@ -6,6 +6,8 @@ import Image from 'next/image'
 import PricingDecoration from '@/public/images/pricing-decoration.png'
 import Tooltip from '@/components/tooltip'
 import Accordion from '@/components/accordion'
+import { messages } from '@/i18n'
+
 
 export default function PricingTabs() {
   const prices = [
@@ -67,44 +69,39 @@ export default function PricingTabs() {
 
   const faqs = [
     {
-      title: 'Can I use the product for free?',
-      text: 'Absolutely! Grey allows you to create as many commercial graphics/images as you like, for yourself or your clients.',
+      title: messages.pricing.faq.q1,
+      text: messages.pricing.faq.a1,
       active: false,
     },
     {
-      title: 'What payment methods can I use?',
-      text: 'Absolutely! Grey allows you to create as many commercial graphics/images as you like, for yourself or your clients.',
+      title: messages.pricing.faq.q2,
+      text: messages.pricing.faq.a2,
       active: false,
     },
     {
-      title: 'Can I change from monthly to yearly billing?',
-      text: 'Absolutely! Grey allows you to create as many commercial graphics/images as you like, for yourself or your clients.',
+      title: messages.pricing.faq.q3,
+      text: messages.pricing.faq.a3,
       active: false,
     },
     {
-      title: 'Can I use the tool for personal, client, and commercial projects?',
-      text: 'Absolutely! Grey allows you to create as many commercial graphics/images as you like, for yourself or your clients.',
-      active: true,
-    },
-    {
-      title: 'How can I ask other questions about pricing?',
-      text: 'Absolutely! Grey allows you to create as many commercial graphics/images as you like, for yourself or your clients.',
+      title: messages.pricing.faq.q4,
+      text: messages.pricing.faq.a4,
       active: false,
     },
     {
-      title: 'Do you offer discount for students and no-profit companies?',
-      text: 'Absolutely! Grey allows you to create as many commercial graphics/images as you like, for yourself or your clients.',
+      title: messages.pricing.faq.q5,
+      text: messages.pricing.faq.a5,
       active: false,
     },
   ]
 
   return (
-    <section>
+    <section id="pricing">
       <div className="py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="relative max-w-3xl mx-auto text-center pb-12">
-            <h2 className="font-inter-tight text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Start your journey today</h2>
-            <p className="text-lg text-zinc-500">Start creating realtime design experiences for free. Upgrade for extra features and collaboration with your team.</p>
+            <h2 className="font-inter-tight text-3xl md:text-4xl font-bold text-zinc-900 mb-4">{messages.pricing.heading}</h2>
+            <p className="text-lg text-zinc-500">{messages.pricing.subheading}</p>
           </div>
 
           {/* Pricing tabs component */}
@@ -112,7 +109,7 @@ export default function PricingTabs() {
 
             {/* Pricing toggle */}
             <div className="max-w-sm mx-auto lg:max-w-3xl space-y-3 mb-12 lg:mb-16">
-              <div className="text-center text-sm text-zinc-700 font-medium" x-text="`${prices[value].contacts} contacts/month`"></div>
+              <div className="text-center text-sm text-zinc-700 font-medium">{messages.pricing.sliderLabel.replace('{contacts}', prices[tier].contacts)}</div>
               <div className="relative flex items-center" style={{ '--progress': `${progress}`, '--segments-width': `${segmentsWidth}` } as React.CSSProperties}>
                 <div className="absolute left-2.5 right-2.5 h-1.5 bg-zinc-200 rounded-full overflow-hidden before:absolute before:inset-0 before:bg-linear-to-r before:from-zinc-400 before:to-zinc-800 before:[mask-image:linear-gradient(to_right,var(--color-white),var(--color-white)_var(--progress),transparent_var(--progress))] after:absolute after:inset-0 after:bg-[repeating-linear-gradient(to_right,transparent,transparent_calc(var(--segments-width)-1px),--theme(--color-white/.7)_calc(var(--segments-width)-1px),--theme(--color-white/.7)_calc(var(--segments-width)+1px))]" aria-hidden="true"></div>
                 <input className="relative appearance-none cursor-pointer w-full bg-transparent focus:outline-hidden [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-sm [&::-webkit-slider-thumb]:focus-visible:ring-3 [&::-webkit-slider-thumb]:focus-visible:ring-zinc-300 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-sm [&::-moz-range-thumb]:focus-visible:ring-3 [&::-moz-range-thumb]:focus-visible:ring-zinc-300" type="range" min="0" max={prices.length - 1} aria-valuetext={`${prices[tier].contacts} contacts/month`} aria-label="Pricing Slider" onChange={e => setTier(parseInt(e.target.value))} />

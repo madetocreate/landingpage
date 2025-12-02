@@ -1,6 +1,7 @@
 export const metadata = {
-  title: 'Home - Creative',
-  description: 'Page description',
+  title: 'Deine modulare KI-Assistenz mit Gedächtnis',
+  description:
+    'Ein zentraler Arbeitsplatz für Kommunikation, Organisation und Marketing – mit KI, die sich an dich erinnert.',
 }
 
 import Hero from '@/components/hero'

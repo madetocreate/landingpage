@@ -212,18 +212,18 @@ export type LandingContent = {
 
 export const landingContent: LandingContent = {
   hero: {
-    title: "Den Kopf frei. Der Rest in AKLOW.",
+    title: "Den Kopf frei. Der Rest in Aklow.",
     subtitle:
-      "AKLOW modernisiert deinen Betrieb mit KI – ohne Umstellung. Er hängt sich an Telefon, E‑Mail, Website & Messenger und übernimmt Anfragen, Ordnung und Antworten. Gesteuert per Chat oder Sprache.",
+      "Aklow modernisiert deinen Betrieb mit KI – ohne Umstellung. Er hängt sich an Telefon, E‑Mail, Website & Messenger und übernimmt Anfragen, Ordnung und Antworten. Gesteuert per Chat oder Sprache.",
     ctaPrimary: { label: "AI‑Modernisierungs‑Check starten", href: "#modernisierungs-check" },
-    ctaSecondary: { label: "Lass AKLOW dich anrufen", href: "#call-demo" },
+    ctaSecondary: { label: "Lass Aklow dich anrufen", href: "#call-demo" },
     trustHint: "DSGVO‑konform · EU‑Speicher · Kein Training auf deinen Daten",
   },
 
   pain: {
     title: "Wenn alles gleichzeitig kommt, bleibt am Ende alles an dir hängen.",
     subtitle:
-      "Anrufe, E‑Mails, Website‑Anfragen, Dokumente, Notizen – verteilt auf zu viele Orte. AKLOW sammelt alles, macht es wieder auffindbar und hilft dir schneller zu reagieren.",
+      "Anrufe, E‑Mails, Website‑Anfragen, Dokumente, Notizen – verteilt auf zu viele Orte. Aklow sammelt alles, macht es wieder auffindbar und hilft dir schneller zu reagieren.",
     bullets: [
       "Nie wieder Anfragen verpassen",
       "Nie wieder Zettelchaos",
@@ -239,7 +239,7 @@ export const landingContent: LandingContent = {
       {
         title: "Nie wieder Anfragen verpassen",
         description:
-          "AKLOW nimmt Anrufe an, beantwortet Website‑Fragen und sammelt Leads – auch wenn du gerade keine Zeit hast. Du bekommst danach eine kurze Zusammenfassung.",
+          "Aklow nimmt Anrufe an, beantwortet Website‑Fragen und sammelt Leads – auch wenn du gerade keine Zeit hast. Du bekommst danach eine kurze Zusammenfassung.",
       },
       {
         title: "Nie wieder Zettelchaos",
@@ -249,14 +249,14 @@ export const landingContent: LandingContent = {
       {
         title: "Weniger Büro. Mehr Geschäft.",
         description:
-          "AKLOW schreibt Antwortvorschläge, erstellt To‑Dos und Übergaben. Du entscheidest, was rausgeht – du bleibst Chef.",
+          "Aklow schreibt Antwortvorschläge, erstellt To‑Dos und Übergaben. Du entscheidest, was rausgeht – du bleibst Chef.",
       },
     ],
   },
 
   solution: {
     title: "Ein Assistent, viele Kanäle. Ein Gedächtnis.",
-    text: "AKLOW hängt sich an das, was du schon nutzt. Keine komplizierten Dashboards – du steuerst alles per Chat oder Sprache. Und alles arbeitet mit demselben Unternehmens‑Gedächtnis.",
+    text: "Aklow hängt sich an das, was du schon nutzt. Keine komplizierten Dashboards – du steuerst alles per Chat oder Sprache. Und alles arbeitet mit demselben Unternehmens‑Gedächtnis.",
   },
 
   jetbot: {
@@ -273,21 +273,21 @@ export const landingContent: LandingContent = {
   },
 
   demos: {
-    title: "Erlebe AKLOW live.",
+    title: "Erlebe Aklow live.",
     subtitle:
       "Nicht nur lesen – ausprobieren. Zwei kleine Demos, die in Sekunden zeigen, wie sich „Anfrage‑Detox“ anfühlt.",
     callDemo: {
-      title: "„AKLOW ruft dich an“",
+      title: "„Aklow ruft dich an“",
       description:
-        "Gib deine Nummer ein. AKLOW ruft dich an, stellt 4–6 kurze Fragen und schickt dir danach eine saubere Zusammenfassung – wie bei einem echten Kundenkontakt.",
+        "Gib deine Nummer ein. Aklow ruft dich an, stellt 4–6 kurze Fragen und schickt dir danach eine saubere Zusammenfassung – wie bei einem echten Kundenkontakt.",
       inputPlaceholder: "Telefonnummer (z. B. +49 151 12345678)",
       ctaLabel: "Demo‑Anruf starten",
-      consent: "Mit Klick bestätigst du, dass AKLOW dich anrufen darf. Keine Werbung, kein Spam.",
+      consent: "Mit Klick bestätigst du, dass Aklow dich anrufen darf. Keine Werbung, kein Spam.",
     },
     inboxMagic: {
       title: "Inbox‑Magie",
       description:
-        "Schick uns 20 alte E‑Mails oder eine Excel – AKLOW macht daraus in kurzer Zeit:",
+        "Schick uns 20 alte E‑Mails oder eine Excel – Aklow macht daraus in kurzer Zeit:",
       bullets: [
         "eine saubere Kundenliste",
         "offene Punkte & nächste Schritte",
@@ -334,7 +334,7 @@ export const landingContent: LandingContent = {
         id: "memory",
         title: "Unternehmens‑Memory",
         description:
-          "Ein Gedächtnis für dein ganzes Unternehmen. AKLOW merkt sich Verlauf, offene Punkte und wichtige Details – kanalübergreifend.",
+          "Ein Gedächtnis für dein ganzes Unternehmen. Aklow merkt sich Verlauf, offene Punkte und wichtige Details – kanalübergreifend.",
         icon: "memory",
       },
       {
@@ -350,7 +350,7 @@ export const landingContent: LandingContent = {
   howItWorks: {
     title: "So läuft’s ab.",
     subtitle:
-      "Du musst nichts umkrempeln. Wir docken AKLOW an, und du merkst im Alltag sofort den Unterschied.",
+      "Du musst nichts umkrempeln. Wir docken Aklow an, und du merkst im Alltag sofort den Unterschied.",
     steps: [
       {
         title: "Kurz verstehen",
@@ -360,12 +360,12 @@ export const landingContent: LandingContent = {
       {
         title: "Andocken",
         description:
-          "Wir verbinden AKLOW mit deinen bestehenden Kanälen: Telefon, E‑Mail, Website, Messenger – je nach Bedarf.",
+          "Wir verbinden Aklow mit deinen bestehenden Kanälen: Telefon, E‑Mail, Website, Messenger – je nach Bedarf.",
       },
       {
-        title: "AKLOW arbeitet mit",
+        title: "Aklow arbeitet mit",
         description:
-          "AKLOW sammelt Wissen im Unternehmens‑Gedächtnis und übernimmt Schritt für Schritt mehr – ohne dass du neue Software lernen musst.",
+          "Aklow sammelt Wissen im Unternehmens‑Gedächtnis und übernimmt Schritt für Schritt mehr – ohne dass du neue Software lernen musst.",
       },
     ],
   },
@@ -373,24 +373,24 @@ export const landingContent: LandingContent = {
   audience: {
     title: "Für Betriebe, die im Alltag funktionieren müssen.",
     subtitle:
-      "AKLOW ist gemacht für kleine Teams, die keine Zeit für Tool‑Zirkus haben – aber jeden Tag zuverlässig liefern müssen.",
+      "Aklow ist gemacht für kleine Teams, die keine Zeit für Tool‑Zirkus haben – aber jeden Tag zuverlässig liefern müssen.",
     industries: [
       {
         title: "Handwerk & Bau",
         description:
-          "Wenn du unterwegs bist, übernimmt AKLOW Anrufe und sammelt Infos sauber ein. Nachher hast du eine klare Zusammenfassung – statt Chaos im Kopf.",
+          "Wenn du unterwegs bist, übernimmt Aklow Anrufe und sammelt Infos sauber ein. Nachher hast du eine klare Zusammenfassung – statt Chaos im Kopf.",
         benefits: ["Anrufe annehmen & qualifizieren", "Angebotsanfragen strukturieren", "Übergabe als kurze Notiz"],
       },
       {
         title: "Dienstleister & Agenturen",
         description:
-          "AKLOW hält den Überblick über Anfragen, Briefings und offene Punkte – und sorgt dafür, dass nichts untergeht.",
+          "Aklow hält den Überblick über Anfragen, Briefings und offene Punkte – und sorgt dafür, dass nichts untergeht.",
         benefits: ["Smart Inbox für alle Kanäle", "Kundengedächtnis & Verlauf", "Antwortvorschläge & To‑Dos"],
       },
       {
         title: "Immobilien & Beratung",
         description:
-          "Vom Erstkontakt bis zur Nachverfolgung: AKLOW sammelt Infos, erstellt Zusammenfassungen und hilft bei wiederkehrenden Fragen.",
+          "Vom Erstkontakt bis zur Nachverfolgung: Aklow sammelt Infos, erstellt Zusammenfassungen und hilft bei wiederkehrenden Fragen.",
         benefits: ["Leads sammeln", "Telefon & Website zusammenführen", "Schnelle Antworten aus Unternehmenswissen"],
       },
     ],
@@ -419,7 +419,7 @@ export const landingContent: LandingContent = {
       },
       {
         id: "startklar",
-        name: "AKLOW Startklar",
+        name: "Aklow Startklar",
         priceMonthly: "ab 490",
         priceAnnually: "ab 490",
         currency: "€",
@@ -435,7 +435,7 @@ export const landingContent: LandingContent = {
       },
       {
         id: "laeuftmit",
-        name: "AKLOW läuft mit",
+        name: "Aklow läuft mit",
         priceMonthly: "ab 99",
         priceAnnually: "ab 999",
         currency: "€",
@@ -470,7 +470,7 @@ export const landingContent: LandingContent = {
   trust: {
     title: "Sicher. Kontrollierbar. DSGVO‑konform.",
     subtitle:
-      "AKLOW arbeitet nur mit deinen Daten – transparent und nachvollziehbar. Du bestimmst, was angebunden wird und was nicht.",
+      "Aklow arbeitet nur mit deinen Daten – transparent und nachvollziehbar. Du bestimmst, was angebunden wird und was nicht.",
     bullets: [
       "EU‑Speicher möglich (keine US‑Cloud als Standard)",
       "Kein Training auf deinen Daten",
@@ -486,15 +486,15 @@ export const landingContent: LandingContent = {
       {
         question: "Muss ich meine bestehenden Tools ersetzen?",
         answer:
-          "Nein. AKLOW dockt an Telefon, E‑Mail, Website & Messenger an – so, wie du heute arbeitest.",
+          "Nein. Aklow dockt an Telefon, E‑Mail, Website & Messenger an – so, wie du heute arbeitest.",
       },
       {
         question: "Brauche ich ein Dashboard oder eine neue Software?",
         answer:
-          "Nein. Du steuerst AKLOW per Chat oder Sprache. Für den Alltag gibt es einen Posteingang, der alles bündelt.",
+          "Nein. Du steuerst Aklow per Chat oder Sprache. Für den Alltag gibt es einen Posteingang, der alles bündelt.",
       },
       {
-        question: "Kann AKLOW wirklich „über meinen Kunden Bescheid wissen“?",
+        question: "Kann Aklow wirklich „über meinen Kunden Bescheid wissen“?",
         answer:
           "Ja – praktisch statt creepy: Verlauf, offene Punkte und relevante Dokumente werden verknüpft, damit du sofort weißt, worum es geht.",
       },
@@ -506,7 +506,7 @@ export const landingContent: LandingContent = {
       {
         question: "Was ist mit Datenschutz?",
         answer:
-          "AKLOW kann EU‑Speicher nutzen, trainiert nicht auf deinen Daten und arbeitet mandantentrennt pro Betrieb.",
+          "Aklow kann EU‑Speicher nutzen, trainiert nicht auf deinen Daten und arbeitet mandantentrennt pro Betrieb.",
       },
     ],
   },
@@ -522,7 +522,7 @@ export const landingContent: LandingContent = {
           "Warum Anfragen verschwinden, wenn sie über zu viele Kanäle kommen – und wie du mit einem gemeinsamen Posteingang wieder Ordnung reinbekommst.",
         slug: "anfrage-detox-posteingang",
         category: "Praxis",
-        author: { name: "AKLOW Team", role: "AI‑Modernisierung" },
+        author: { name: "Aklow Team", role: "AI‑Modernisierung" },
       },
       {
         title: "Telefon‑Assistent: Nie wieder eine Anfrage verpassen",
@@ -531,7 +531,7 @@ export const landingContent: LandingContent = {
           "Was ein guter Telefon‑Bot können muss: Nachfragen, Zusammenfassen, übergeben – ohne dass es nach „Roboter“ klingt.",
         slug: "telefon-assistent",
         category: "Telefon",
-        author: { name: "AKLOW Team", role: "Voice & Workflows" },
+        author: { name: "Aklow Team", role: "Voice & Workflows" },
       },
       {
         title: "Nie wieder Zettelchaos: Dokumente automatisch sortieren",
@@ -540,7 +540,7 @@ export const landingContent: LandingContent = {
           "Von Foto bis PDF: So bringt ein Dokumenten‑Assistent Ordnung in Belege, Verträge und Formulare – ohne extra Pflege.",
         slug: "nie-wieder-zettelchaos-dokumente",
         category: "Dokumente",
-        author: { name: "AKLOW Team", role: "Dokumenten‑Workflows" },
+        author: { name: "Aklow Team", role: "Dokumenten‑Workflows" },
       },
     ],
   },
@@ -549,7 +549,7 @@ export const landingContent: LandingContent = {
     eyebrow: "Funktionen",
     title: "Ein Gehirn. Viele Kanäle.",
     subtitle:
-      "AKLOW verbindet Telefon, E‑Mail, Website, Dokumente und Messenger – mit einem gemeinsamen Unternehmens‑Gedächtnis. Damit wirkt dein Betrieb organisiert, schnell und zuverlässig.",
+      "Aklow verbindet Telefon, E‑Mail, Website, Dokumente und Messenger – mit einem gemeinsamen Unternehmens‑Gedächtnis. Damit wirkt dein Betrieb organisiert, schnell und zuverlässig.",
     features: [
       {
         key: "inbox",
@@ -562,27 +562,27 @@ export const landingContent: LandingContent = {
         key: "memory",
         name: "Unternehmens‑Memory",
         description:
-          "AKLOW verknüpft Verlauf, offene Punkte und relevante Dokumente. Wenn jemand schreibt oder anruft, ist der Kontext sofort da.",
+          "Aklow verknüpft Verlauf, offene Punkte und relevante Dokumente. Wenn jemand schreibt oder anruft, ist der Kontext sofort da.",
         iconKey: "server",
       },
       {
         key: "handoff",
         name: "Saubere Übergabe",
         description:
-          "Wenn es wichtig wird, eskaliert AKLOW an dich – mit einer kurzen Zusammenfassung und den nächsten Schritten.",
+          "Wenn es wichtig wird, eskaliert Aklow an dich – mit einer kurzen Zusammenfassung und den nächsten Schritten.",
         iconKey: "lock",
       },
     ],
     image: {
       src: "https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png",
-      alt: "AKLOW Inbox und Übersicht",
+      alt: "Aklow Inbox und Übersicht",
     },
     story: {
       eyebrow: "So arbeiten wir",
       title: "AI‑Modernisierung, die im Alltag ankommt.",
       paragraphsLeft: [
         "Die meisten kleinen Betriebe haben kein „KI‑Problem“. Sie haben ein Alltags‑Problem: zu viele Kanäle, zu wenig Zeit, zu wenig Überblick.",
-        "AKLOW ist deshalb kein weiteres Tool, das du lernen musst. Wir docken an das an, was du bereits nutzt – und bauen daraus ein System, das mitdenkt.",
+        "Aklow ist deshalb kein weiteres Tool, das du lernen musst. Wir docken an das an, was du bereits nutzt – und bauen daraus ein System, das mitdenkt.",
       ],
       paragraphsRight: [
         "Du startest mit einem kurzen Check. Danach gehen wir Schritt für Schritt live: meist zuerst ein Kanal (Telefon oder Inbox), dann erweitern wir, wenn der Alltag ruhiger wird.",
@@ -616,7 +616,7 @@ export const landingContent: LandingContent = {
         },
         {
           section: "Memory",
-          title: "AKLOW weiß sofort, worum es geht",
+          title: "Aklow weiß sofort, worum es geht",
           description:
             "Kundenverlauf, offene Punkte, wichtige Dokumente – verknüpft und sofort abrufbar, ohne Suchen.",
           imageUrl: "https://tailwindui.com/plus/img/component-images/bento-03-performance.png",
@@ -626,7 +626,7 @@ export const landingContent: LandingContent = {
           section: "Antworten",
           title: "Antwortvorschläge, die zu deinem Betrieb passen",
           description:
-            "AKLOW schreibt vor – du gibst frei. Schnell, konsistent, professionell.",
+            "Aklow schreibt vor – du gibst frei. Schnell, konsistent, professionell.",
           imageUrl: "https://tailwindui.com/plus/img/component-images/bento-04-speed.png",
           imageAlt: "Antwortvorschläge",
         },
@@ -636,7 +636,7 @@ export const landingContent: LandingContent = {
 
   aboutPage: {
     hero: {
-      eyebrow: "Über AKLOW",
+      eyebrow: "Über Aklow",
       title: "KI‑Modernisierung, die kleine Betriebe wirklich nutzen.",
       subtitle:
         "Wir bauen keine Feature‑Wand. Wir bauen Entlastung im Alltag: Anfragen, Ordnung und Antworten – kanalübergreifend, kontrollierbar und einfach bedienbar.",
@@ -644,7 +644,7 @@ export const landingContent: LandingContent = {
     mission: {
       title: "Unsere Mission",
       body:
-        "Kleine Unternehmen sollen KI nutzen können, ohne ihr Geschäft umzustellen. AKLOW hängt sich an bestehende Systeme, arbeitet mit einem gemeinsamen Gedächtnis und wird Schritt für Schritt eingeführt – so, dass es im Alltag wirklich hilft.",
+        "Kleine Unternehmen sollen KI nutzen können, ohne ihr Geschäft umzustellen. Aklow hängt sich an bestehende Systeme, arbeitet mit einem gemeinsamen Gedächtnis und wird Schritt für Schritt eingeführt – so, dass es im Alltag wirklich hilft.",
     },
     values: [
       {
@@ -656,7 +656,7 @@ export const landingContent: LandingContent = {
       {
         title: "Kontrolle & Transparenz",
         description:
-          "Du siehst, was AKLOW macht. Du bestimmst, welche Daten angebunden werden und welche Antworten rausgehen.",
+          "Du siehst, was Aklow macht. Du bestimmst, welche Daten angebunden werden und welche Antworten rausgehen.",
         iconKey: "shield",
       },
       {

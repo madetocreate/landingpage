@@ -11,14 +11,15 @@ export default function HeroHome() {
     <section className="relative">
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
-          <div className="pb-12 text-center md:pb-16">
+        <div className="pb-24 pt-48 md:pb-32 md:pt-56">
+          <div className="pb-16 text-center md:pb-20">
             <h1
-              className="mb-6 text-5xl font-bold md:text-6xl"
+              className="mb-8 text-5xl font-bold leading-tight md:text-6xl"
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              {hero.title}
+              <span className="block">Den Kopf frei.</span>
+              <span className="block mt-2">Der Rest in Aklow.</span>
             </h1>
             <div className="mx-auto max-w-3xl">
               <p

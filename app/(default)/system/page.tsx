@@ -206,7 +206,7 @@ export default function ModernisierungPage() {
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col gap-y-3 border-l border-gray-900/15 pl-6">
                 <dt className="text-sm/6">{stat.name}</dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight" style={{ color: 'var(--color-accent-green)' }}><AnimatedStat value={stat.value} /></dd>
+                <dd className="order-first text-3xl font-semibold tracking-tight"><AnimatedStat value={stat.value} /></dd>
               </div>
             ))}
           </dl>

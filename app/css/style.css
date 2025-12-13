@@ -235,17 +235,4 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-  
-  /* Apply Design Tokens Globally */
-  html {
-    background-color: var(--color-bg-app);
-    color: var(--color-text-primary);
-  }
-  
-  body {
-    background-color: var(--color-bg-app);
-    color: var(--color-text-primary);
-    transition: background-color var(--motion-duration) var(--motion-ease),
-                color var(--motion-duration) var(--motion-ease);
-  }
 }

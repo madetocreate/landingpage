@@ -1,71 +1,57 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { getTranslations, type Locale, locales as supportedLocales } from "./i18n";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { Locale, getTranslations } from "./i18n";
 
-type LocaleContextValue = {
+type LocaleContextType = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
 };
 
-const LocaleContext = createContext<LocaleContextValue | undefined>(undefined);
+const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
+const LOCALE_COOKIE = "aklow_locale";
 
-function readLocaleFromEnvironment(): Locale {
-  if (typeof window === "undefined") {
-    return "de";
-  }
+export function LocaleProvider({ children }: { children: React.ReactNode }) {
+  const [locale, setLocaleState] = useState<Locale>(() => {
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get("lang") as Locale;
+      const cookieLocale = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith(`${LOCALE_COOKIE}=`))
+        ?.split("=")[1] as Locale;
 
-  const params = new URLSearchParams(window.location.search);
-  const paramLang = params.get("lang");
-  if (paramLang && (supportedLocales as string[]).includes(paramLang)) {
-    return paramLang as Locale;
-  }
-
-  const match = document.cookie.match(/(?:^|;\s*)simple_locale=([^;]+)/);
-  const cookieLang = match?.[1];
-  if (cookieLang && (supportedLocales as string[]).includes(cookieLang)) {
-    return cookieLang as Locale;
-  }
-
-  return "de";
-}
-
-export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("de");
-
-  useEffect(() => {
-    const initial = readLocaleFromEnvironment();
-    setLocaleState(initial);
-  }, []);
-
-  function setLocale(next: Locale) {
-    setLocaleState(next);
-
-    if (typeof document !== "undefined") {
-      document.cookie = `simple_locale=${next}; path=/; max-age=31536000`;
+      const allowed = ["de", "en", "es", "fr", "it"];
+      if (langParam && allowed.includes(langParam)) return langParam;
+      if (cookieLocale && allowed.includes(cookieLocale)) return cookieLocale;
     }
+    return "de";
+  });
 
+  const setLocale = (newLocale: Locale) => {
+    setLocaleState(newLocale);
     if (typeof window !== "undefined") {
       const url = new URL(window.location.href);
-      url.searchParams.set("lang", next);
-      window.history.replaceState(null, "", url.toString());
+      url.searchParams.set("lang", newLocale);
+      window.history.replaceState({}, "", url.toString());
     }
-  }
-
-  const value: LocaleContextValue = {
-    locale,
-    setLocale,
   };
 
-  return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
+  useEffect(() => {
+    document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=31536000; samesite=lax`;
+  }, [locale]);
+
+  return (
+    <LocaleContext.Provider value={{ locale, setLocale }}>
+      {children}
+    </LocaleContext.Provider>
+  );
 }
 
 export function useLocale() {
-  const ctx = useContext(LocaleContext);
-  if (!ctx) {
-    throw new Error("useLocale must be used within a LocaleProvider");
-  }
-  return ctx;
+  const context = useContext(LocaleContext);
+  if (!context) throw new Error("useLocale must be used within LocaleProvider");
+  return context;
 }
 
 export function useTranslations() {

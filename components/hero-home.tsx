@@ -19,7 +19,7 @@ export default function HeroHome() {
               data-aos-delay={150}
             >
               <span className="block">Den Kopf frei.</span>
-              <span className="block mt-2">Der Rest in Aklow.</span>
+              <span className="block mt-2">Der Rest in AKLOW.</span>
             </h1>
             <div className="mx-auto max-w-3xl">
               <p

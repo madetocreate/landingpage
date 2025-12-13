@@ -90,7 +90,7 @@ export default function HeroHome() {
                   data-aos-delay={450}
                 >
                   <motion.a
-                    className="btn group mb-4 w-full bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn btn-blue group mb-4 w-full bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href={hero.ctaPrimary.href ?? "#0"}
                     whileHover={{ y: -1.5, scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
@@ -104,7 +104,7 @@ export default function HeroHome() {
                     </span>
                   </motion.a>
                   <a
-                    className="btn w-full bg-white text-gray-800 shadow-sm hover:bg-gray-50 sm:ml-4 sm:w-auto"
+                    className="btn btn-green w-full text-white shadow-sm sm:ml-4 sm:w-auto"
                     href={hero.ctaSecondary?.href ?? "#0"}
                   >
                     {hero.ctaSecondary?.label}

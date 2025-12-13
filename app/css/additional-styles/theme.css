@@ -1,6 +1,105 @@
+/* Apple-Style Design Tokens - Light Mode (Default) */
+:root {
+  /* Colors - Light Mode */
+  --color-bg-app: #ffffff;
+  --color-bg-surface: #fafafa;
+  --color-bg-surface-muted: #f5f5f5;
+  --color-bg-elevated: #ffffff;
+  
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-text-muted: #86868b;
+  --color-text-inverted: #fafafa;
+  
+  --color-border-subtle: rgba(0, 0, 0, 0.1);
+  --color-border-strong: rgba(0, 0, 0, 0.12);
+  
+  /* Accent Colors */
+  --color-accent-blue: #007aff;
+  --color-accent-blue-soft: rgba(0, 122, 255, 0.1);
+  --color-accent-green: #34c759;
+  --color-accent-green-soft: rgba(52, 199, 89, 0.1);
+  --color-accent-green-dark: #30d158;
+  --color-accent-green-light: #5de26a;
+  
+  /* Shadows - Apple Style */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.08);
+  
+  /* Motion */
+  --motion-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --motion-duration: 0.25s;
+  --motion-duration-fast: 0.2s;
+  
+  /* Radius */
+  --radius-card: 12px;
+  --radius-button: 8px;
+}
+
+/* Apple-Style Design Tokens - Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors - Dark Mode */
+    --color-bg-app: #000000;
+    --color-bg-surface: #1c1c1e;
+    --color-bg-surface-muted: #2c2c2e;
+    --color-bg-elevated: #2c2c2e;
+    
+    --color-text-primary: #f2f2f7;
+    --color-text-secondary: rgba(242, 242, 247, 0.7);
+    --color-text-muted: rgba(242, 242, 247, 0.5);
+    --color-text-inverted: #1c1c1e;
+    
+    --color-border-subtle: rgba(255, 255, 255, 0.12);
+    --color-border-strong: rgba(255, 255, 255, 0.16);
+    
+    /* Accent Colors - Same in Dark Mode */
+    --color-accent-blue: #0a84ff;
+    --color-accent-blue-soft: rgba(10, 132, 255, 0.15);
+    --color-accent-green: #30d158;
+    --color-accent-green-soft: rgba(48, 209, 88, 0.15);
+    --color-accent-green-dark: #28cd41;
+    --color-accent-green-light: #5de26a;
+    
+    /* Shadows - Dark Mode */
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Manual Dark Mode Toggle */
+[data-theme="dark"] {
+  --color-bg-app: #000000;
+  --color-bg-surface: #1c1c1e;
+  --color-bg-surface-muted: #2c2c2e;
+  --color-bg-elevated: #2c2c2e;
+  
+  --color-text-primary: #f2f2f7;
+  --color-text-secondary: rgba(242, 242, 247, 0.7);
+  --color-text-muted: rgba(242, 242, 247, 0.5);
+  --color-text-inverted: #1c1c1e;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.12);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  
+  --color-accent-blue: #0a84ff;
+  --color-accent-blue-soft: rgba(10, 132, 255, 0.15);
+  --color-accent-green: #30d158;
+  --color-accent-green-soft: rgba(48, 209, 88, 0.15);
+  --color-accent-green-dark: #28cd41;
+  --color-accent-green-light: #5de26a;
+  
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
 /* Scrollspy links */
 [data-scrollspy-link].scrollspy-active {
-  @apply text-blue-500 font-medium;
+  @apply font-medium;
+  color: var(--color-accent-blue);
 }
 
 /* Custom AOS animations */
@@ -87,7 +186,67 @@ transition-property: transform, opacity;
   }
 
   html:not(.no-js) body [data-aos=zoom-out-left] {
-      -webkit-transform: translate3d(10px, 0, 0) scale(1.2);
-      transform: translate3d(10px, 0, 0) scale(1.2);
+    -webkit-transform: translate3d(10px, 0, 0) scale(1.2);
+    transform: translate3d(10px, 0, 0) scale(1.2);
   }
+}
+
+/* Apply Design Tokens to Body */
+body {
+  background-color: var(--color-bg-app);
+  color: var(--color-text-primary);
+  transition: background-color var(--motion-duration) var(--motion-ease),
+              color var(--motion-duration) var(--motion-ease);
+}
+
+/* Green Buttons (default, except AI Modernisierung) */
+.btn:not(.btn-blue):not([class*="blue"]):not([class*="bg-white"]):not([class*="bg-gray"]) {
+  background: linear-gradient(to top, var(--color-accent-green-dark), var(--color-accent-green));
+  color: white;
+  transition: all var(--motion-duration) var(--motion-ease);
+}
+
+.btn:not(.btn-blue):not([class*="blue"]):not([class*="bg-white"]):not([class*="bg-gray"]):hover {
+  background: linear-gradient(to top, var(--color-accent-green), var(--color-accent-green-light));
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-green {
+  background: linear-gradient(to top, var(--color-accent-green-dark), var(--color-accent-green));
+  color: white;
+}
+
+.btn-green:hover {
+  background: linear-gradient(to top, var(--color-accent-green), var(--color-accent-green-light));
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Blue Button for AI Modernisierung */
+.btn-blue,
+.btn[class*="blue"] {
+  background: linear-gradient(to top, var(--color-accent-blue), var(--color-accent-blue));
+  color: white;
+}
+
+.btn-blue:hover,
+.btn[class*="blue"]:hover {
+  background: linear-gradient(to top, var(--color-accent-blue), var(--color-accent-blue));
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Stats/Counter Green Color */
+.stat-number,
+[class*="stat"] [class*="number"],
+.counter {
+  color: var(--color-accent-green) !important;
+}
+
+/* Animated Stat Green */
+.animated-stat,
+[class*="animated-stat"] {
+  color: var(--color-accent-green) !important;
 }
